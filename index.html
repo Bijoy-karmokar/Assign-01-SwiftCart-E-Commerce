@@ -28,9 +28,8 @@
     />
   </head>
   <body>
-    <!-- navbar -->
+    <!-- navbar section -->
     <header>
-
       <nav>
         <div class="navbar bg-base-100 shadow-sm">
           <div class="navbar-start">
@@ -56,26 +55,72 @@
                 class="menu menu-sm dropdown-content text-lg bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
                 <li><a href="/">Home</a></li>
-                <li><a href="">Product</a></li>
+                <li><a href="">Products</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
               </ul>
             </div>
-            <a class="text-3xl font-bold text-blue-600">SwiftCart</a>
+            <a href="/" class="text-3xl font-bold text-blue-600">SwiftCart</a>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-lg font-semibold">
               <li><a href="/">Home</a></li>
-                <li><a href="">Product</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+              <li><a href="">Products</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
             </ul>
           </div>
           <div class="navbar-end">
-           <p> <i class="fa-solid fa-cart-shopping"></i></p>
+            <p><i class="fa-solid fa-cart-shopping"></i></p>
           </div>
         </div>
       </nav>
     </header>
+    <!-- footer section -->
+    <footer
+      class="footer sm:footer-horizontal bg-base-200 text-base-content p-10"
+    >
+      <nav>
+        <a href="/" class="text-3xl font-bold text-blue-600">SwiftCart</a>
+        <p class="text-gray-600">
+          You one-stop shop for all your fashion <br />
+          and lifestyle needs. Quantity products,fast <br />delivery, and
+          excellent support.
+        </p>
+      </nav>
+      <nav>
+        <h6 class="footer-title">QUICK LINKS</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">Products</a>
+        <a class="link link-hover">About</a>
+        <a class="link link-hover">Contact</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">SUPPORT</h6>
+        <a class="link link-hover">FAQ</a>
+        <a class="link link-hover">Shipping</a>
+        <a class="link link-hover">Returns</a>
+        <a class="link link-hover">Privacy Policy</a>
+      </nav>
+      <form>
+        <h6 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h6>
+        <fieldset class="w-80">
+          <label
+            >The latest news,articles, and resources,<br />sent to your inbox
+            weekly.</label
+          >
+          <div class="join">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              class="input input-bordered join-item"
+            />
+            <button class="btn btn-primary join-item">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+      <hr />
+    </footer>
+    
   </body>
 </html>
