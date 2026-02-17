@@ -6,7 +6,6 @@ const loadCategories=async()=>{
 const displayCategories = (categories) => {
     const allCategories = document.getElementById("all-categories");
     allCategories.innerHTML = "";
-
     // Create ALL button first
     const allBtn = document.createElement("button");
     allBtn.innerText = "All";
@@ -135,7 +134,20 @@ const displayProducts=(products)=>{
         `
         allCategory.append(createDiv);
     })
-    
 }
 
-loadCategories()
+
+// details page
+const loadSingleProduct =async(id)=>{
+     const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+     const data = await res.json();
+     displaySingleProduct(data);
+     
+}
+const displaySingleProduct = (singleProduct)=>{
+    console.log(singleProduct);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadCategories();
+});

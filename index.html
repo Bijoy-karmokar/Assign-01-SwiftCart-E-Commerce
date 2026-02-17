@@ -106,36 +106,36 @@
               <p class="text-lg text-gray-600 mt-3">We provide the best shopping experience with top-notch services.</p>
           </div>
            <div class="grid gap-5 mb-8 lg:px-72 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-    <div class="p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2">
+    <div class="p-5 duration-300 transform bg-white border cursor-pointer rounded shadow-sm hover:-translate-y-2">
       <div class="flex items-center justify-center w-12 h-12 mb-4 bg-indigo-50">
-        <i class="fa-solid text-blue-600 fa-cart-flatbed"></i>
+        <i class="fa-solid text-blue-600 fa-cart-flatbed text-2xl"></i>
       </div>
       <h6 class="mb-2 font-semibold leading-5">Fast Delivery</h6>
       <p class="text-sm text-gray-900">
         Get your orders delivered to <br> your doorstep quickly and <br> efficiently.
       </p>
     </div>
-    <div class="p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2">
+    <div class="p-5 duration-300 transform cursor-pointer bg-white border rounded shadow-sm hover:-translate-y-2">
       <div class="flex items-center justify-center w-12 h-12 mb-4  bg-indigo-50">
-         <i class="fa-regular text-blue-600 fa-headphones"></i>
+         <i class="fa-regular text-blue-600 fa-headphones text-2xl"></i>
       </div>
       <h6 class="mb-2 font-semibold leading-5">24/7 Support</h6>
       <p class="text-sm text-gray-900">
        Our support team is available <br> around the clock to assist you.
       </p>
     </div>
-    <div class="p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2">
+    <div class="p-5 duration-300 transform bg-white cursor-pointer border rounded shadow-sm hover:-translate-y-2">
       <div class="flex items-center justify-center w-12 h-12 mb-4 bg-indigo-50">
-         <i class="fa-solid text-blue-600 fa-shield"></i>
+         <i class="fa-solid text-blue-600 fa-shield text-2xl"></i>
       </div>
       <h6 class="mb-2 font-semibold leading-5">Secure Payment</h6>
       <p class="text-sm text-gray-900">
           Experience safe and secure <br> transactions with our <br> encrypted payment systems.
       </p>
     </div>
-    <div class="p-5 duration-300 transform bg-white border rounded shadow-sm hover:-translate-y-2">
+    <div class="p-5 duration-300 transform bg-white border cursor-pointer rounded shadow-sm hover:-translate-y-2">
       <div class="flex items-center justify-center w-12 h-12 mb-4 bg-indigo-50">
-       <i class="fa-solid text-blue-600 fa-arrow-rotate-left"></i>
+       <i class="fa-solid text-blue-600 fa-arrow-rotate-left text-2xl"></i>
       </div>
       <h6 class="mb-2 font-semibold leading-5">Easy Returns</h6>
       <p class="text-sm text-gray-900">
@@ -146,9 +146,17 @@
   
   </div>
       </section>
+
+      <section class="lg:px-72">
+          <p class="text-4xl font-bold ">Trending Now</p>
+          <div id="top-products" class="flex flex-wrap justify-between gap-5 my-10">
+
+          </div>
+      </section>
     </main>
     <!-- footer section -->
-    <footer
+   <div>
+     <footer
       class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 lg:px-60"
     >
       <nav>
@@ -192,5 +200,37 @@
       </form>
       <hr />
     </footer>
+    <hr class="border border-1 border-gray-300">
+    <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 lg:px-60">
+  <aside class="grid-flow-col items-center">
+    <p>
+  © <span id="year"></span> SwiftCart,Inc. All rights reserved
+</p>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  </aside>
+  <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <a>
+     <i class="fa-brands fa-square-facebook text-2xl"></i>
+    </a>
+    <a>
+     <i class="fa-brands fa-twitter text-2xl"></i>
+    </a>
+    <a>
+      <i class="fa-brands fa-instagram text-2xl"></i>
+    </a>
+    <a>
+      <i class="fa-brands fa-linkedin-in text-2xl"></i>
+    </a>
+    <a>
+     <i class="fa-regular fa-envelope text-2xl"></i>
+    </a>
+  </nav>
+</footer>
+   </div>
+    
+   <script src="./javaScript/index.js"></script>
   </body>
 </html>
