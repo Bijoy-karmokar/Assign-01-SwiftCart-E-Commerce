@@ -174,6 +174,31 @@
         </nav>
       </footer>
     </div>
+
+    
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="product_modal" class="modal">
+  <div class="modal-box">
+    <div id="details-container">
+      <div class="space-y-4">
+         <h3 class="text-lg font-bold">Title:hello Bijoy</h3>
+         <p class="text-lg font-bold">Description: Bangladesh is a small country.</p>
+         <div class="flex justify-between items-center gap-6 text-lg font-semibold">
+          <p>Price:$120</p>
+          <p>Rating:<i class="fa-solid text-yellow-400 fa-star"></i> ${product.rating.rate} (${product.rating.count})</p>
+         </div>
+         <button class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    </div>
+  </div>
+</dialog>
+
     <script src="./javaScript/script.js"></script>
   </body>
 </html>

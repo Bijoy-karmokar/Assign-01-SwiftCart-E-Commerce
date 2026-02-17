@@ -68,14 +68,14 @@ const displayAllProduct = (products)=>{
             <div class="card-body">
               <div class="flex justify-between items-center font-semibold gap-16 w-full">
                 <div class="badge badge-soft badge-primary">${product.category}</div>
-                <p>${product.rating.rate} (${product.rating.count})</p>
+                <p><i class="fa-solid text-yellow-400 fa-star"></i> ${product.rating.rate} (${product.rating.count})</p>
               </div>
               <p class="truncate font-semibold"> 
                 ${product.title}
               </p>
               <p class="font-semibold">$ ${product.price}</p>
               <div class="card-actions justify-between">
-                <div class="btn px-5">
+                <div onclick="loadSingleProduct(${product.id})" class="btn px-5">
                   <i class="fa-regular fa-eye"></i> Details
                 </div>
                 <div class="btn btn-primary px-5">
@@ -115,7 +115,7 @@ const displayProducts=(products)=>{
             <div class="card-body">
               <div class="flex justify-between items-center font-semibold gap-16 w-full">
                 <div class="badge badge-soft badge-primary">${product.category}</div>
-                <p>${product.rating.rate} (${product.rating.count})</p>
+                <p><i class="fa-solid text-yellow-400 fa-star"></i> ${product.rating.rate} (${product.rating.count})</p>
               </div>
               <p class="truncate font-semibold"> 
                 ${product.title}
@@ -145,7 +145,20 @@ const loadSingleProduct =async(id)=>{
      
 }
 const displaySingleProduct = (singleProduct)=>{
-    console.log(singleProduct);
+    // console.log(singleProduct);
+    const detailsContainer = document.getElementById("details-container");
+    detailsContainer.innerHTML=`
+        <div class="space-y-4">
+         <h3 class="font-medium"><span class="text-lg font-bold">Title</span>:<br/> ${singleProduct.title}</h3>
+         <p class=" font-medium"><span class="text-lg font-bold">Description</span>: <br/> ${singleProduct.description}</p>
+         <div class="flex justify-between items-center gap-6 text-lg font-semibold">
+          <p>Price:$ ${singleProduct.price}</p>
+          <p>Rating:<i class="fa-solid text-yellow-400 fa-star"></i> ${singleProduct.rating.rate} (${singleProduct.rating.count})</p>
+         </div>
+         <button class="btn btn-primary">Buy Now</button>
+      </div>
+    `;
+    document.getElementById('product_modal').showModal();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

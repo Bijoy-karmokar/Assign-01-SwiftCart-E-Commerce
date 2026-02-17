@@ -24,9 +24,9 @@ const displayTopRatedProducts = (products) => {
                 <img src="${product.image}" class="w-44 h-44 p-4 object-contain" alt="${product.title}">
             </figure>
             <div class="card-body">
-                <div class="flex justify-between items-center font-semibold gap-4 w-full">
+                <div class="flex justify-between items-center font-semibold gap-10 w-full">
                     <div class="badge badge-soft badge-primary">${product.category}</div>
-                    <p>${product.rating.rate} (${product.rating.count})</p>
+                    <p><i class="fa-solid text-yellow-400 fa-star"></i> ${product.rating.rate} (${product.rating.count})</p>
                 </div>
                 <p class="truncate font-semibold mt-2">${product.title}</p>
                 <p class="font-semibold mt-1">$ ${product.price}</p>
