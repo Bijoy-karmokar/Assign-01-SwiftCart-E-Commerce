@@ -176,3 +176,17 @@ const displaySingleProduct = (singleProduct)=>{
 document.addEventListener("DOMContentLoaded", () => {
     loadCategories();
 });
+
+document.getElementById('btn-search').addEventListener('click',()=>{
+   const input = document.getElementById('input-search');
+   const valueSearch = input.value.trim().toLowerCase();
+  //  console.log(valueSearch);
+   fetch('https://fakestoreapi.com/products')
+   .then(res=>res.json())
+   .then(data=>{
+     const filterProduct = data.filter(product=>product.title.toLowerCase().includes(valueSearch)
+     )
+    displayProducts(filterProduct);
+    
+   })
+})
