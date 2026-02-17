@@ -3,6 +3,16 @@ const loadCategories=async()=>{
    const data = await res.json();
    displayCategories(data);
 }
+
+const manageSpinner = (status)=>{
+     if(status == true){
+       document.getElementById("spinner").classList.remove('hidden');
+       document.getElementById("all-category").classList.add('hidden');
+     }else{
+       document.getElementById("all-category").classList.remove('hidden');
+       document.getElementById("spinner").classList.add('hidden');
+     }
+}
 const displayCategories = (categories) => {
     const allCategories = document.getElementById("all-categories");
     allCategories.innerHTML = "";
@@ -90,6 +100,7 @@ const displayAllProduct = (products)=>{
 }
 
 const loadProductCate =async(category)=>{
+    manageSpinner(true)
       const res = await fetch(`https://fakestoreapi.com/products/category/${encodeURIComponent(category)}`);
       const data = await res.json();
       displayProducts(data);
@@ -134,6 +145,7 @@ const displayProducts=(products)=>{
         `
         allCategory.append(createDiv);
     })
+    manageSpinner(false)
 }
 
 
