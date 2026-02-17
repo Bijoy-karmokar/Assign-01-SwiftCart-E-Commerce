@@ -190,3 +190,17 @@ document.getElementById('btn-search').addEventListener('click',()=>{
     
    })
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".menu a").forEach(link => {
+      const linkPage = link.pathname.split("/").pop();
+
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+
+  });
